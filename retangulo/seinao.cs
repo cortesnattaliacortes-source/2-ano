@@ -1,0 +1,30 @@
+using ConsoleApp1;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System;
+using System.Globalization;
+
+namespace exercicio_retangulo
+
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Retangulo ret = new Retangulo();
+
+            Console.WriteLine("Entre a Largura e Altura do retângulo:");
+            ret.Largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            ret.Altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture) ;
+
+            Console.WriteLine("AREA = " + ret.Area().ToString("F2",CultureInfo.InvariantCulture));
+            Console.WriteLine("PERIMETRO =" + ret.Perimetro().ToString(CultureInfo.InvariantCulture));
+            Console.WriteLine("DIAGONAL = " + ret.Diagonal().ToString(CultureInfo.InvariantCulture));
+
+
+        }
+    }
+}
